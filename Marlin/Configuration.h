@@ -81,7 +81,7 @@
 #define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
-//#define SHOW_CUSTOM_BOOTSCREEN
+#define SHOW_CUSTOM_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
 #define CUSTOM_STATUS_SCREEN_IMAGE
@@ -1805,7 +1805,7 @@
 #endif
 
 #if EITHER(MIN_SOFTWARE_ENDSTOPS, MAX_SOFTWARE_ENDSTOPS)
-  //#define SOFT_ENDSTOPS_MENU_ITEM  // Enable/Disable software endstops from the LCD
+  #define SOFT_ENDSTOPS_MENU_ITEM  // Enable/Disable software endstops from the LCD
 #endif
 
 /**
@@ -2145,8 +2145,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // (mm) X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // (mm) Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT PROBING_MARGIN // (mm) X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT (Y_MAX_POS - PROBING_MARGIN)  // (mm) Y point for Z homing
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
