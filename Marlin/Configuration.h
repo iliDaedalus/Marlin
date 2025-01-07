@@ -689,10 +689,10 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // autotuned by ili
-    // M303 E0 S210 C8 : M301 P23.61 I1.56 D89.44
-    #define DEFAULT_Kp 25.23
-    #define DEFAULT_Ki 1.61
-    #define DEFAULT_Kd 98.69
+    // M303 E0 S210 C8 : M301 P22.92 I1.25 D105.10
+    #define DEFAULT_Kp 22.92
+    #define DEFAULT_Ki 1.25
+    #define DEFAULT_Kd 105.10
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -779,10 +779,10 @@
 
   // ANET A6
   // autotuned by ili
-  // M303 E-1 S60 C8 : M304 K109.50 I14.85 D538.18
-  #define DEFAULT_bedKp 160.50
-  #define DEFAULT_bedKi 14.85
-  #define DEFAULT_bedKd 538.18
+  // M303 E-1 S60 C8 : M304 K131.14 I19.76 D580.13
+  #define DEFAULT_bedKp 131.14
+  #define DEFAULT_bedKi 19.76
+  #define DEFAULT_bedKd 580.13
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
